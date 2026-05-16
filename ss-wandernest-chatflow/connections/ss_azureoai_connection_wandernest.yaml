@@ -1,0 +1,10 @@
+$schema: 
+  https://azuremlschemas.azureedge.net/promptflow/latest/AzureOpenAIConnection.schema.json
+type: azure_open_ai
+name: ss_azureoai_connection_wandernest
+module: promptflow.connections
+api_base: https://ss-wandernest-foundry.openai.azure.com/
+api_key: ${env:SS_AZUREOAI_CONNECTION_WANDERNEST_API_KEY}
+api_type: azure
+api_version: 2024-02-15-preview
+auth_mode: key

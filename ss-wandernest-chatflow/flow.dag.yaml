@@ -22,11 +22,11 @@ nodes:
     type: code
     path: chat.jinja2
   inputs:
-    deployment_name: " gpt-5-mini-ss-wandernest"
+    deployment_name: gpt-5-mini-ss-wandernest
     temperature: 1
     question: ${inputs.question}
     contexts: ${retreival.output}
-  connection: ss-azure-oai-connection-wandernest
+  connection: ss_azureoai_connection_wandernest
   api: chat
 - name: retreival
   type: python
@@ -34,6 +34,6 @@ nodes:
     type: code
     path: retreival.py
   inputs:
-    search_connection: ss-azure-aisearch-connection
+    search_connection: ss_azure_aisearch_connection
     query: ${inputs.question}
     index_name: ss-rag-wandernest2
